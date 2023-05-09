@@ -30,6 +30,24 @@ namespace InstanceVariablePrac
             list.Add(new Student() { name = "배서연", grade = 3 });
             list.Add(new Student() { name = "배서연", grade = 3 });
             list.Add(new Student() { name = "배서연", grade = 3 });
+
+            List<Student> list2 = new List<Student>
+            {
+                new Student(){ name = "배서연", grade=3},
+                new Student(){ name = "배서연", grade=3},
+                new Student(){ name = "배서연", grade=3}
+            };
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+
+            foreach (var item in list2)
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
 }
