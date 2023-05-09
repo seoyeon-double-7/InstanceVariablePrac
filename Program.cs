@@ -27,15 +27,18 @@ namespace InstanceVariablePrac
             Console.WriteLine(product1);
 
             List<Student> list = new List<Student>();
-            list.Add(new Student() { name = "배서연", grade = 3 });
-            list.Add(new Student() { name = "배서연", grade = 3 });
-            list.Add(new Student() { name = "배서연", grade = 3 });
+            list.Add(new Student() { name = "일서연", grade = 1 });
+            list.Add(new Student() { name = "이서연", grade = 2 });
+            list.Add(new Student() { name = "삼서연", grade = 3 });
+            list.Add(new Student() { name = "사서연", grade = 4 });
+            list.Add(new Student() { name = "오서연", grade = 1 });
+            list.Add(new Student() { name = "육서연", grade = 2 });
 
             List<Student> list2 = new List<Student>
             {
                 new Student(){ name = "배서연", grade=3},
-                new Student(){ name = "배서연", grade=3},
-                new Student(){ name = "배서연", grade=3}
+                new Student(){ name = "배서연", grade=2},
+                new Student(){ name = "배서연", grade=1}
             };
 
             foreach (var item in list)
@@ -43,7 +46,24 @@ namespace InstanceVariablePrac
                 Console.WriteLine(item);
             }
 
-            foreach (var item in list2)
+            // 리스트 안에 인스턴스 지우기
+            foreach (var item in list)
+            {
+                if (item.grade == 3)
+                {
+                    list.Remove(item);
+                }
+            }
+
+            for(int i=0; i<list.Count; i++)
+            {
+                if(list[i].grade == 3)
+                {
+                    list.RemoveAt(i);
+                }
+            }
+
+            foreach (var item in list)
             {
                 Console.WriteLine(item);
             }
