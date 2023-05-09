@@ -21,10 +21,15 @@ namespace InstanceVariablePrac
             Product product4 = new Product() { name = "고구마", price = 1000 };
             Product product5 = new Product() { name = "고구마", price = 1000 };
 
-            // 멤버 변수
+            // 클래스 변수 출력
             Console.WriteLine(Product.origin);
             Console.WriteLine(product1.name + "/" + + product1.price);
             Console.WriteLine(product1);
+
+            List<Student> list = new List<Student>();
+            list.Add(new Student() { name = "배서연", grade = 3 });
+            list.Add(new Student() { name = "배서연", grade = 3 });
+            list.Add(new Student() { name = "배서연", grade = 3 });
         }
     }
 }
